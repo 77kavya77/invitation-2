@@ -25,7 +25,7 @@ body {
 /* Header Styles */
 header {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-        url('images/cute.jpg');
+        url('images/bg3.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;

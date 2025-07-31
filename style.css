@@ -24,8 +24,8 @@ body {
 
 /* Header Styles */
 header {
-    background: linear-gradient(rgba(8, 27, 27, 0.7), rgba(8, 27, 27, 0.7)),
-        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url('images/cute.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -40,6 +40,7 @@ header {
 
 .header-content {
     animation: fadeIn 2s ease-in-out;
+    margin-bottom: 4rem;
 }
 
 @keyframes fadeIn {
@@ -143,7 +144,8 @@ h1 {
     min-width: 300px;
     max-width: 400px;
     padding: 2rem;
-    background-color: white;
+    background-color: whitesmoke;
+    background-image: url(images/bg2.jpg);
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -195,30 +197,175 @@ h1 {
 }
 
 /* Date Section */
+
 .date-section {
     padding: 5rem 2rem;
     background-color: var(--dark-green);
     text-align: center;
 }
 
+.carousel-wrapper {
+    width: 320px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    border-radius: 20px;
+    margin: 40px 0 45px -15px;
+}
+
+.carousel-container {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    width: 1600px;
+    animation: sliding 16s infinite;
+}
+
+.carousel>div {
+    width: 400px;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel:hover {
+    animation-play-state: paused;
+}
+
+.carousel .image-one {
+    background-image: url("images/img1.jpg");
+    background-position: bottom;
+
+}
+.carousel .image-two {
+    background-image: url("images/img2.jpg");
+    background-position: 50% 20%;
+}
+.carousel .image-three {
+    background-image: url("images/img3.jpg");
+    background-position: 50% 75%;
+
+}
+.carousel .image-four {
+    background-image: url("images/img4.jpg");
+    background-position: 50% 20%;
+}
+
+@keyframes sliding {
+    20% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-400px);
+    }
+
+    45% {
+        transform: translateX(-400px);
+    }
+
+    50% {
+        transform: translateX(-800px);
+    }
+
+    70% {
+        transform: translateX(-800px);
+    }
+
+    75% {
+        transform: translateX(-1200px);
+    }
+
+    95% {
+        transform: translateX(-1200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-wrapper {
+        width: 312px;
+        height: 210px;
+    }
+
+    .carousel-container {
+        width: 240px;
+        height: 150px;
+    }
+
+    .carousel {
+        width: 960px;
+    }
+
+    .carousel>div {
+        width: 240px;
+        height: 150px;
+    }
+
+    @keyframes sliding {
+        20% {
+            transform: translateX(0);
+        }
+
+        25% {
+            transform: translateX(-240px);
+        }
+
+        45% {
+            transform: translateX(-240px);
+        }
+
+        50% {
+            transform: translateX(-480px);
+        }
+
+        70% {
+            transform: translateX(-480px);
+        }
+
+        75% {
+            transform: translateX(-720px);
+        }
+
+        95% {
+            transform: translateX(-720px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+
 .calendar {
-    max-width: 400px;
-    margin: 2rem auto;
-    background-color: white;
-    border-radius: 10px;
+    max-width: 500px;
+    height: 650px;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: var(--cream);
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
-.calendar-header {
-    background-color: var(--gold);
-    color: white;
-    padding: 1rem;
-    font-size: 1.5rem;
-}
 
 .calendar-body {
-    padding: 1.5rem;
+    padding: 6.5rem;
 }
 
 .calendar-date {
@@ -254,7 +401,7 @@ h1 {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 1rem;
+    margin-top: 2rem;
     transition: background-color 0.3s ease;
 }
 

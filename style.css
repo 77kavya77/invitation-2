@@ -294,14 +294,17 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+
     .carousel-wrapper {
-        width: 312px;
-        height: 210px;
+        width: 240px;
+        height: 150px;
+        margin: 40px 0px -5px -75px;
     }
 
     .carousel-container {
         width: 240px;
         height: 150px;
+        margin: 0px auto;
     }
 
     .carousel {
@@ -311,43 +314,38 @@ h1 {
     .carousel>div {
         width: 240px;
         height: 150px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     @keyframes sliding {
         20% {
             transform: translateX(0);
         }
-
         25% {
             transform: translateX(-240px);
         }
-
         45% {
             transform: translateX(-240px);
         }
-
         50% {
             transform: translateX(-480px);
         }
-
         70% {
             transform: translateX(-480px);
         }
-
         75% {
             transform: translateX(-720px);
         }
-
         95% {
             transform: translateX(-720px);
         }
-
         100% {
             transform: translateX(0);
         }
     }
 }
-
 
 .calendar {
     max-width: 500px;
